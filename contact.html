@@ -1,0 +1,277 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            body{margin: 0;
+                 background-color: linen;
+            }
+            
+            
+            *{
+                text-align: center;
+            }
+            #class{
+               width:100%;
+               height:400px;
+               position: relative;
+               
+            }
+            input[type=text], select, textarea {
+              width:70%;
+              padding: 12px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              resize: vertical;
+            }
+ .text1{
+     line-height: 38px;
+    font-size:20px;
+     font-family:cursive;
+    
+ }
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding:15px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px 0;
+  font-size:20px;
+}
+
+input[type=submit]:hover {
+  background-color: black;
+  
+}
+
+.container {
+  border-radius: 5px;
+  padding: 20px;width:60%;
+  margin:0 auto; 
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+footer{
+    background-color:white;
+    color: black;
+    padding:50px;
+    text-align: center;
+}
+.social-media img{
+    width:40px;
+    height:40px;
+    margin: 20px 3px;
+}
+.text3{
+     line-height: 42px;
+     font-size:21px;
+     margin:40px 0;
+     font-family:cursive;
+ }
+#bg-1{
+    width:100%;
+    height:500px;
+    position:relative;
+   /* filter: blur(3px); */
+}
+
+.text2{
+    line-height:48px;
+    font-size:30px;
+    background-color: cadetblue;
+    padding:100px 0;
+    margin: 0;
+    text-transform:lowercase;
+    color:white;
+    
+}
+.sec1{
+    width: 100%;
+    height:500px;
+    display:flex;
+    margin: -505px 0 0 0;
+    position: absolute;
+    color: white;
+    font-size:25px;
+    justify-content: center;
+}
+.col-1{
+    width:33%;
+    padding:100px 0 0 0; 
+    background-color:black;
+    opacity: 0.5;
+}
+.col-2{
+    width:33%;
+    padding:100px 0 0 0; 
+    background-color:blue;
+    opacity: 0.5;
+}
+.col-3{
+    width:33%;
+    padding:100px 0 0 0; 
+    background-color:gray;
+    opacity: 0.5;
+}
+.text-4{
+    position: absolute;
+    margin:-300px 0 0 30px;
+    font-size: 25px; 
+    color: white;
+    background-color: black;
+    opacity: 0.7; 
+    padding:2px 30px;
+}
+
+        </style>
+    </head>
+<body>
+    <div>
+        <img src="images/class.jpg" id="class"> 
+        <div class="text-4">
+            <h1>Contact Us</h1>
+          
+        </div>
+    </div>
+    <h1>Contact Us</h1>
+    <p class="text1">If you would like to contact our organization, if you have any<br>
+            questions/concerns/thoughts or if you just want to say “hello” please <br>
+            feel free to contact us using the form below. We would love to hear from<br>
+            you and will endeavor to reply as soon as possible. Questions regarding adoption<br>
+            or arranged marriages will not be replied to.
+    </p>
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="col-25">
+                    <label for="name">Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="name" name="name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Email</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="email" name="email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject">Subject</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="subject" name="subject">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="message">Message</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                 <input type="submit" value="Send" onclick="send()">
+            </div>
+        </form>
+    </div>
+    <script>
+            function send() {
+                var n=document.getElementById("name").value;
+                var e=document.getElementById("email").value;
+                var s=document.getElementById("subject").value;
+                var m=document.getElementById("message").value;
+                var mailformat =/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                if(n==''||e==''||s==''||m==''){
+                    alert("enter all details correctly...");
+                }
+                else if(!mailformat.test(e)){
+                    alert("invalid email format please enter valid email..");
+                }
+                else{
+                    alert("send successfully!!!");
+                    //window.location= "home48.html"; //redirect page
+                }
+               
+            }
+    </script>
+        
+        <div>
+             <h2>Get Connected</h2>
+             <p class="text3">The Orphan Care Centre is not just made up of our people on the ground in Pune, we are a<br>
+                 movement of individuals working together to change the world.</p>
+        </div>
+        <div>
+            <img src="images/bg-1.jpg" id="bg-1"> 
+            
+        </div>
+        <div class="sec1">
+            <div class="col-1">
+                <h2>Address</h2>
+                <p>
+                    Orphan Care Centre<br>
+                    Dist. Pune<br>
+                    Maharashtra, India 411019
+                </p>
+            </div>
+            <div class="col-2">
+                <h2>Office Hours</h2>
+                <p>
+                    Monday – Saturday 8am to 5pm
+                </p>
+                
+            </div>
+            <div class="col-3">
+                <h2>Phone</h2>
+                <p>
+                    +91 9527762119
+                    +91 7276343939
+                </p>
+                
+            </div>
+        </div>
+        
+            <p class="text2">WE CARE FOR CHILDREN NOT BECAUSE WE ARE RESCUERS, BUT<br>
+                BECAUSE WE ARE THE RESCUED.
+        </p>
+        
+        
+    <footer>
+        2004 - 2021 ORPHAN CARE CENTER  |   ALL RIGHTS RESERVED
+        <div class="social-media">
+            <img src="images/fb.png">
+            <img src="images/insta.png">
+            <img src="images/twitter.png">
+            <img src="images/youtube.png">
+            <img src="images/gmail.png">
+        </div>
+    </footer>
+    
+</body>
+</html>

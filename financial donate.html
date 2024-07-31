@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+             background-color: linen;
+         margin: 0;
+        }
+        #donate1 img{
+              width: 100%;
+               height:550px;
+               position: relative;
+              
+               
+            }
+            .donate{
+    position: absolute;
+    margin:-300px 0 0 30px;
+    font-size: 25px; 
+}
+.donate h1{
+     color:white;
+    background-color: black;
+    opacity: 0.7;
+    margin:10px 10px; 
+    padding:10px 5px; 
+}
+.text1{
+    text-align: center;
+    font-size:20px;
+    font-family:cursive;
+    color: gray;
+    margin: 90px 20px;
+    
+}
+
+form{
+  padding: 60px 0;
+  margin: 60px auto;
+  width: 800px;
+}
+.body-text {
+  padding: 0 20px 30px 20px;
+  font-family: "Roboto";
+  font-size: 1em;
+  color: black;
+  text-align: center;
+  line-height: 1.2em;
+}
+.form-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.card-wrapper {
+  background-color: #6FB7E9;
+  width: 100%;
+  display: flex;
+
+}
+.personal-information {
+  background-color: #3C8DC5;
+  color: #fff;
+  padding: 1px 0;
+  text-align: center;
+}
+h1 {
+  font-size: 1.3em;
+  font-family: "Roboto"
+}
+input {
+  margin: 1px 0;
+  padding-left: 3%;
+  font-size: 14px;
+}
+input[type="text"]{
+  display: block;
+  height: 55px;
+  width: 97%;
+  border: none;
+}
+input[type="email"]{
+  display: block;
+  height: 55px;
+  width: 97%;
+  border: none;
+}
+input[type="submit"]{
+  display: block;
+  height: 60px;
+  width: 100%;
+  border: none;
+  background-color: #3C8DC5;
+  color: #fff;
+  margin-top: 2px;
+  curson: pointer;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+input[type="submit"]:hover{
+  background-color: black;
+  transition: 0.3s ease;
+}
+#column-left {
+  width: 46.5%;
+  float: left;
+  margin-bottom: 2px;
+}
+#column-right {
+  width: 46.5%;
+  float: right;
+}
+
+@media only screen and (max-width: 480px){
+  body {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .form-container {
+    margin: 0 2%;
+  }
+  input {
+    font-size: 1em;
+  }
+  #input-button {
+    width: 100%;
+  }
+  #input-field {
+    width: 96.5%;
+  }
+  h1 {
+    font-size: 1.2em;
+  }
+  input {
+    margin: 2px 0;
+  }
+  input[type="submit"]{
+    height: 50px;
+  }
+  #column-left {
+    width: 96.5%;
+    display: block;
+    float: none;
+  }
+  #column-right {
+    width: 96.5%;
+    display: block;
+    float: none;
+  }
+     #input-field1 {
+    width: 96.5%;
+    height: 80%;
+  }
+}
+ footer{
+    background-color: white;
+    color: black;
+    padding:50px;
+    text-align: center;
+    }
+
+.social-media img{
+    width:40px;
+    height:40px;
+    margin: 20px 3px;
+}
+
+    </style>
+</head>
+<body>
+     <div>
+         <div id="donate1">
+             <img src="images/donate1.jpg">
+         </div>    
+        <div class="donate">
+            <h1>Financial Donation</h1>
+        </div>
+    </div>
+    <div class="text1">
+        Transparency is important for us and a huge part of what we do is ensuring that supporters know where their<br>
+        money is going. We have always worked hard to accurately account for and report the financial position of<br>
+        our organization. We have a culture of accountability and integrity and are committed to doing the right<br>
+        thing. Many organizations choose to only present their Annual Reports to the public for viewing but in the<br>
+        spirit of full disclosure we have chosen to make available our Audited Financial Reports as well as regular<br>
+        declaration of our Foreign Contribution intake. For those who do not know the Financial Year in India is<br>
+        from April 1st to March 31st each year.
+    </div>
+<div>
+  <form>
+    <div class="form-container">
+        <div class="personal-information"><h1>Donation Form</h1></div>
+        <input id="column-left" class="fname" type="text" name="first-name" placeholder=" Enter your first name"/>
+        <input id="column-right" class="lname" type="text" name="last-name" placeholder="Surname"/>
+        <input id="input-field" class="email" type="email" name="email" placeholder="Email" />
+        <input id="input-field"  class="pno" type="text" name="number" placeholder="Phone Number"/>
+        <input id="input-field" class="amt" type="text" name="number" placeholder="Amount"/>
+        <input id="input-field" class="cno" type="text" name="number" placeholder="Card Number"/>
+        <input id="column-left" type="text" class="exp" name="expiry" placeholder="MM / YY"/>
+        <input id="column-right" type="text"  class="cvv" name="cvv" placeholder="cvv"/>
+        <input id="input-field" type="text"  class="sadd" name="streetaddress"  maxlength="45" placeholder="Streed Address"/>
+        <input id="column-left" type="text" class="city" name="city" maxlength="20" placeholder="City"/>
+        <input id="column-right" type="text" class="zip" name="zipcode" pattern="[0-9]*" maxlength="5" placeholder="ZIP code"/>
+        <input id="input-field1" type="text" class="msg" name="message" maxlength="60" placeholder="message"/>
+        <input id="input-button" type="submit" value="Send" onclick="send()">
+    </div>        
+  </form>
+</div>
+    <script>
+    function send(){
+        var n= document.getElementsByClassName("fname").value;
+        var s= document.getElementsByClassName("lname").value;
+        var e= document.getElementsByClassName("email").value;
+        var p= document.getElementsByClassName("pno").value;
+        var a= document.getElementsByClassName("amt").value;
+        var c= document.getElementsByClassName("cno").value;
+        var y= document.getElementsByClassName("exp").value;
+        var cv=document.getElementsByClassName("cvv").value;
+        var s= document.getElementsByClassName("sadd").value;
+        var ci=document.getElementsByClassName("city").value;
+        var z= document.getElementsByClassName("zip").value;
+        var m= document.getElementsByClassName("msg").value;
+        if(n==''||s==''||e==''||p==''||a==''||c==''||y==''||cv==''||s==''||ci==''||z==''||m==''){
+            alert("enter all details correctly...");
+        }
+        else{
+            alert("send successfully!!!");
+        }
+    }
+    </script>
+
+<footer>
+        2004 - 2021 ORPHAN CARE CENTER   |   ALL RIGHTS RESERVED
+        <div class="social-media">
+            <img src="images/fb.png">
+            <img src="images/insta.png">
+            <img src="images/twitter.png">
+            <img src="images/youtube.png">
+            <img src="images/gmail.png">
+        </div>
+</footer>
+      
+</body>
+</html>
